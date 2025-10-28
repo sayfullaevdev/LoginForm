@@ -4,27 +4,20 @@ import { Card } from "./components/ui/card";
 import { Input as ShadInput } from "./components/ui/input";
 import { X } from "lucide-react";
 
+type field = {
+
+    value: string;
+    error: boolean;
+    validate: RegExp;
+
+}
+
+
 type AuthFormData = {
-  login: {
-    value: string;
-    error: boolean;
-    validate: RegExp;
-  };
-  password: {
-    value: string;
-    error: boolean;
-    validate: RegExp;
-  };
-  email: {
-    value: string;
-    error: boolean;
-    validate: RegExp;
-  };
-  surname: {
-    value: string;
-    error: boolean;
-    validate: RegExp;
-  };
+  login:field ;
+  password: field;
+  email:field ;
+  surname: field;
 };
 
 function App() {
